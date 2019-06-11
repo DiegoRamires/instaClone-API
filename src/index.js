@@ -6,9 +6,7 @@ mongoose.connect('mongodb+srv://astro-9:star@cluster0-ahjnp.mongodb.net/test?ret
   useNewUrlParser: true,
 })
 
-app.get('/', (req, res) => {
-  return res.send('Hello World')
-})
+app.use(require('./routes'))
 
 app.listen(3000)
 console.log('Server running on localhost:3000')
